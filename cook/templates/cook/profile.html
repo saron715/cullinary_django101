@@ -1,0 +1,42 @@
+
+{% extends 'cook/dark.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/stylep.css'%}">
+    <link rel="stylesheet" href="{% static 'css/list.css'%}">
+{% endblock %}
+{% block content %}
+
+    
+    
+    <section id="home"> <h2></h2>
+
+        <p></p>
+        {% if request.user.is_authenticated %}
+        <u><h1> Welcome back, {{ request.user.username }}. Here’s what your friends have been cooking...</h1></l>
+        {% else %}
+        <p>Welcome, Guest!</p>
+        <a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">Sign Up</a>
+        {% endif %}    
+        
+        </section>
+   <br><br>
+    <section class="recipe-section">
+        
+        <div class="recipe-cards">
+            <h4>Favourite recipes of the week</h4>
+        {% for recipe in popular_recipes %}
+                <div class="recipe-card">
+                    <a href="{% url 'recipe_detail' recipe.id %}">
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image" style="width: 200px; height: 200px;">
+                        <div style="font-size:10px;" class="recipe-title">{{ recipe.title }}</div>
+                    </a>
+                    
+                </div>
+                
+        {% endfor %}
+        </div>
+    </section>
+    
+
+{% endblock %}

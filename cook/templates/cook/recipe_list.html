@@ -1,0 +1,48 @@
+{% extends 'cook/dark.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/stylep.css'%}">
+    <link rel="stylesheet" href="{% static 'css/list.css'%}">
+{% endblock %}
+{% block content %}
+    
+       
+
+
+    <div><a href="{% url 'profile' %}">Home</a></div>
+        <div><a href="{% url 'recipe_post' %}">Add New Recipe</a></div>
+    <div class="container">
+        
+  
+        <div class="recipe-list">
+            {% if is_all_recipes %}
+            <h1>All Recipes</h1>
+            <!-- Render a list of all recipes -->
+            <ul>
+                {% for recipe in recipes %}
+                <a href="{% url 'recipe_detail' recipe.id %}"><div class="recipe-card">
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
+                    <div class="recipe-title">{{ recipe.title }}</div>
+                    
+                </div></a>
+                    <!-- Other recipe details -->
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h1>My Recipes</h1>
+            <!-- Render a list of the user's recipes -->
+            <ul>
+                {% for recipe in recipes %}
+                <div class="recipe-card">
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
+                    <div class="recipe-title">{{ recipe.title }}</div>
+                    
+                </div>
+                    <!-- Other recipe details -->
+                {% endfor %}
+            </ul>
+        {% endif %}
+        
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,80 @@
+/* log.css */
+body {
+    background: #14181c;
+    font-family: "Proxima Nova", sans-serif;
+    color: #ffffff;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar {
+    background: #007BFF;
+    overflow: hidden;
+    padding: 10px; /* Add padding to the header */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); /* Adjust for header height */
+}
+
+form {
+    background: #435565;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000000;
+    width: 400px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    background: #00b300;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+}

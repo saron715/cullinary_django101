@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ recipe.title }} - Recipe Details</title>
+    <!-- Add your CSS and static files as needed -->
+    <link rel="stylesheet" href="{% static 'css/form.css'%}">
+</head>
+<body><center>
+    <h1>{{ recipe.title }}</h1>
+    
+<br/><br/>
+<div>
+    {% if submitted %}
+    <div>
+        <p>Thank you for submitting your review!</p>
+        <div><a href="{% url 'profile' %}">Home</a></div>
+    </div>
+    {% else %}
+    <form action="" method='POST'>
+        {%csrf_token%}
+        {{ form.as_p}}
+        <input type ="submit" value="Submit" class="btn btn-secondary">
+
+
+    </form>
+    <div><a href="{% url 'profile' %}">Home</a></div>
+    {% endif %}
+</div>
+</center>
+    <!-- Display other recipe details and related data as needed -->
+
+    
+</body>
+</html>

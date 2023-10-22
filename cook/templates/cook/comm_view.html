@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/comm.css'%}" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to the {{ community.cuisine_type.name }}Community</h1>
+    </header>
+    <div><a href="{% url 'profile' %}">Home</a></div>
+    <div class="community-description">
+        <h2>About the Community</h2>
+        <p>{{community.description}}</p>
+    </div>
+
+    <div class="community-members">
+        <h2>Active members:{{ community.members.count }}</h2>
+        
+    </div>
+
+    <div class="community-chat">
+        <h2>Community Chat</h2>
+        <div class="chat-messages">
+            <!-- Chat messages appear here -->
+        </div>
+        <textarea placeholder="Type your message"></textarea>
+        <button class="send-button">Send</button>
+    </div>
+
+    <div class="community-recipes">
+        <h2>Community Recipes</h2>
+        <ul>
+            <li><a href="#">Recipe 1</a></li>
+            <li><a href="#">Recipe 2</a></li>
+            <!-- Add more recipes dynamically -->
+        </ul>
+        <button class="post-recipe-button">Post Recipe</button>
+    </div>
+
+    <div class="community-actions">
+        <button class="leave-button">Leave Community</button>
+    </div>
+</body>
+</html>
+

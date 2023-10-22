@@ -1,0 +1,20 @@
+<!-- member_list.html -->
+
+{% extends 'cook/dark.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/stylep.css'%}">
+    <link rel="stylesheet" href="{% static 'css/list.css'%}">
+{% endblock %}
+{% block content %}
+<div><a href="{% url 'profile' %}">Home</a></div><br>
+  <h1>Members</h1>
+  <ul>
+    {% for user in users %}
+      <li>
+        <img src="{{ user.profileimg.url }}" alt="{{ user.user.username }}" width="50" height="50">
+        <a href="#">{{ user.user.username }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

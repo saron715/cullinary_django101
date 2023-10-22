@@ -1,0 +1,45 @@
+{% extends 'cook/dark.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/stylep.css'%}">
+    
+{% endblock %}
+{% block content %}
+<div><a href="{% url 'profile' %}">Home</a></div><br>
+   
+  <h3>Community Suggestions</h3>
+  
+  <ul>
+    {% for suggestion in suggestions %}
+      <li>
+        <p>Suggested at: {{ suggestion.suggested_at }}</p>
+        <p>Suggested Communities:</p>
+        <ul>
+          {% for community in suggestion.suggested_communities.all %}
+            <li>{{ community.name }}</li>
+            <form method="post" action="{% url 'join_community' community.id %}">
+            
+              {% csrf_token %}
+              <button type="submit">Join</button>
+            </form>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+  <h1>Your Communities</h1>
+
+<br><br>
+<div class="community-list">
+    
+        <h3>Communities Joined :</h3>
+        <ul>
+            {% for community in joined_communities %}
+                <li><a href="{% url 'community_view' community.id %}">{{ community.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <!-- Add more communities dynamically -->
+    
+</div>
+{% endblock %}
+

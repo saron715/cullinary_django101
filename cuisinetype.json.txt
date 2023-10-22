@@ -1,0 +1,10 @@
+[
+    {"model": "cook.cuisinetype", "pk": 1, "fields": {"name": "Italian"}},
+    {"model": "cook.cuisinetype", "pk": 2, "fields": {"name": "Mexican"}},
+    {"model": "cook.cuisinetype", "pk": 3, "fields": {"name": "Chinese"}},
+    {"model": "cook.cuisinetype", "pk": 4, "fields": {"name": "Indian"}},
+    {"model": "cook.cuisinetype", "pk": 5, "fields": {"name": "Japanese"}},
+    {"model": "cook.cuisinetype", "pk": 6, "fields": {"name": "Mediterranean"}},
+    {"model": "cook.cuisinetype", "pk": 7, "fields": {"name": "Thai"}},
+    {"model": "cook.cuisinetype", "pk": 8, "fields": {"name": "American"}},
+]

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/style1.css'%}" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="{% static 'css/second-styling.css'%}" />
+        <title>CulinaryCircle</title>
+    </head>
+    <body style=" font-size: 14px;">
+        <div class="container mx-auto relative">
+            <div class="background row absolute">
+                <img
+                    class="absolute"
+                    src="{% static 'img/ai-generated-8119616_1280.jpg'%}"
+                    alt=""
+                />
+                <span class="absolute text-white movie-title"
+                    ><a href="#">Biriyani</a></span
+                >
+            </div>
+            <header class="row relative justify-content-between">
+                <img class="col-3 lg-col-4 md-col-5 xsm-col-6" src="{% static 'img/CulinaryCircle.png'%}" alt="" />
+                <nav style=" font-size: 14px;"  class="col-9 d-flex-row align-items-center lg-d-none">
+                    <ul class="col-12 justify-content-end nav-list">
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="/cook/login">LOGIN</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="/cook/signup">CREATE ACCOUNT</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="#">RECIPES</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="#">LISTS</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="#">PEOPLE</a>
+                        </li>
+                        <li class="nav-list-item col-2 relative">
+                            <input style=" font-size: 14px;" type="search" /><img
+                                class="absolute"
+                                src="{% static 'img/CulinaryCircle.png'%}"
+                                alt=""
+                            />
+                        </li>
+                    </ul>
+                </nav>
+                <ul
+                    class="burger-menu col-6 d-none lg-d-flex-row justify-content-end no-list-style"
+                >
+                    <li class="col-6 sm-col-7 xsm-col-8 relative d-flex-row align-items-center">
+                        <input type="search" /><img
+                            class="absolute"
+                            src="{% static 'img/CulinaryCircle.png'%}"
+                            alt=""
+                        />
+                    </li>
+                    <li class="col-2 sm-col-3 d-flex-row align-items-center">
+                        <img src="./imgs/iconmonstr-menu-1-24.png" alt="" />
+                    </li>
+                </ul>
+            </header>
+            <main>
+                <section class="intro row">
+                    <article class="col-12 d-flex-col">
+                        <h1 style=" font-size: 20px;"class="h1 text-white mx-auto col-12">
+                            Track Recipes you’ve created. <br />
+                            Save those you want to try. <br />
+                            Tell your friends what’s good.
+                        </h1>
+                        <button class="mx-auto col-3 lg-col-4 sm-col-6 xsm-col-7">
+                            GET STARTED &mdash; IT'S FREE!
+                        </button>
+                        <p
+                            class="d-flex-row sm-d-none mx-auto col-8 lg-col-12 justify-content-center"
+                        >
+                            The social network for Food lovers. Also available on
+                            <i class="apple-logo"></i><i class="android-logo"></i>
+                        </p>
+                        <p
+                            class="d-none sm-d-flex-row mx-auto col-8 lg-col-12 justify-content-center"
+                        >
+                            The social network for food lovers.
+                        </p>
+                        <p
+                            class="d-none sm-d-flex-row mx-auto col-8 lg-col-12 justify-content-center"
+                        >
+                            Also available on <i class="apple-logo"></i><i class="android-logo"></i>
+                        </p>
+                    </article>
+                </section>
+            </main> 
+    </body>
+</html>

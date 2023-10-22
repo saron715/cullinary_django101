@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    
+  <head>
+    <title>CulinaryCircle - Sign In</title>
+    
+  <link rel="stylesheet" href="{% static 'css/log.css'%}">
+  </head>
+  <body>
+    <div id="error-message"></div>
+    <div class="container">
+        {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+        <div class="log">
+            
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+        <h1 style="color: #9ab">Sign In to CulinaryCircle</h1>
+        <label for="email">Username:</label>
+        <input type="text" name="username" id="pass" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="pass" required />
+        <div id="login">
+            <input type="submit" value="Login">
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>

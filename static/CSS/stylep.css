@@ -1,0 +1,198 @@
+/* ... Previous CSS code ... */
+
+/* Style for recipe sections */
+/* Updated CSS for the search bar */
+.search-container {
+    position:absolute;
+    top: 10px; /* Adjust the top position as needed */
+     /* Adjust the right position as needed */
+    display: flex; /* To align the input and button horizontally */
+    align-items: center;
+    
+    /* To vertically center the input and button */
+}
+
+/* Style the search input and button */
+.search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+
+.recipe-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -10px; /* Add margin to negate the negative margin from individual recipe cards */
+}
+
+/* Style for individual recipe cards */
+.recipe-card {
+    flex: 0 0 calc(20% - 20px); /* Adjust the width as per your layout preference */
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+.recipe-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ... Rest of the CSS code ... */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+        }
+
+        header {
+            background-color: #131C21;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #131C21;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .nav-item:hover .nav-dropdown {
+            display: block;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #3E545A;
+        }
+
+        .nav-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #131C21;
+            z-index: 1;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #3E545A;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* New Sections */
+        .recipe-section {
+            margin-top: 20px;
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        .recipe-card {
+            flex: 0 0 auto;
+            width: 250px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 0px;
+        }
+        .post-button {
+            display: inline-block;
+            background-color: #0079d3;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .post-button:hover {
+            background-color: #005bb5;}

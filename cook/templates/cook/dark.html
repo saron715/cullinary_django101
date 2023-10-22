@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/style1.css'%}" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        
+        <link rel="stylesheet" href="{% static 'css/second-styling.css'%}" />
+        {% block extra_css %}{% endblock %}
+        <title>CulinaryCircle</title>
+    </head>
+    <body style="background-color:#99aabb;">
+        
+           
+            <header  class="site-header js-hide-in-app" id="header" style="font-family:
+            Graphik-Semibold-Web, sans-serif;font-size:
+            13px;">
+                
+                <nav class="col-9 d-flex-row align-items-center lg-d-none">
+                    <ul class="col-12 justify-content-end nav-list">
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;"  class="nav-list-link text-white small" href="#">Profile</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="/cook/member_list_view">Members</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;"  class="nav-list-link text-white small" href="/cook/recipe_list?all_recipes=true">Recipes</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;" class="nav-list-link text-white small" href="/cook/recipe_list">MyRecipes</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;;" class="nav-list-link text-white small" href="/cook/community_suggestions">Communities</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a style=" font-size: 14px;"  href="{% url 'logout' %}" class="nav-list-link text-white small">Log Out</a>
+                        </li>
+                        
+                        <li class="nav-list-item">
+                            
+                                <a style=" font-size: 16px;" class="nav-list-link text-white small" href="/cook/recipe_post" >Post recipe</a>
+                            
+                        </li>
+                        <li style=" font-size: 16px;" class="nav-list-item col-2 relative" style="paddind-left:70px;">
+                            
+                            <form style=" font-size: 16px;"  method="POST" action="{% url 'recipe_search'%}">
+                                {% csrf_token %}
+                                <input  style=" font-size: 16px;" type="search"  placeholder="search" name="searched" >
+                                
+                                <button type="submit">
+                                    <img class="absolute" src="{% static 'img/search.png'%}" alt="">
+                                  </button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="burger-menu col-6 d-none lg-d-flex-row justify-content-end no-list-style">
+                    
+                </ul>
+            </header>
+
+            
+        
+
+<div style="background-color:#99aabb;">
+        <main style="background-color:#99aabb;font-size:46px;">
+            {% block content %}{% endblock %}
+        </main> 
+         
+           
+    </div>     
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+
+
+{% load static %}
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/stylep.css'%}">
+    <link rel="stylesheet" href="{% static 'css/list.css'%}"><!-- Link to your CSS file -->
+    <title>Recipe Details</title>
+</head>
+<body>
+    <div class="recipe-card">
+        <img src={{ recipe.image.url }} alt="Delicious Recipe">
+        <h1 class="recipe-title">{{ recipe.title }}</h1>
+        <p class="recipe-description">{{ recipe.description }}</p>
+    </div>
+
+    <div class="reviews">
+        <h2>Reviews</h2>
+        <ul class="review-list">
+            {% for review in reviews %}
+            <li class="review-item">
+                <div class="user-avatar">
+                    <img src="{{ review.user.profileimg.url }}" alt="{{ review.user.username }}" class="recipe-image" >
+                </div>
+                <div class="review-content">
+                    <h3>{{ review.user.username }}</h3>
+                    <p>{{ review.text }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+    <a href="{% url 'add_review' recipe.id %}" class="review-button">Add Review</a>
+</div>
+
+<a href="{% url 'recipe_search' %}" class="back-link">Back to Recipe Search</a>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="{% static 'css/list.css'%}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div><a href="{% url 'profile' %}">Home</a></div>
+    <h1>Recipe Search</h1>
+
+    <!-- Search Form -->
+    <div class="search-container">
+        <form method="POST" action="{% url 'recipe_search'%}">
+            {% csrf_token %}
+        <input type="text" class="search-input" placeholder="Search recipes" name="searched">
+        <button class="search-button">Search</button>
+    </form>
+    </div>
+
+    <!-- Search Results -->
+    <div class="recipe-cards">
+        {% for recipe in recipes %}
+            <div class="recipe-card">
+                <a href="{% url 'recipe_detail' recipe.id %}">
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image" style="width: 200px; height: 200px;">
+                    <div class="recipe-title">{{ recipe.title }}</div>
+                </a>
+                <a href="{% url 'add_review' recipe.id %}" class="review-button">Review</a>
+
+                <!-- Like Icon -->
+                <form method="post" action="{% url 'like_recipe' recipe.id%}">
+                    {% csrf_token %}
+                <div>
+
+                    
+                    <button type="submit" class="like-button" name="recipe_id" value="{{ recipe.id }}" >
+                      <img src="{% static 'img/love_8647296.png'%}" alt="buttonpng" border="0" />
+                    </button></div></form>
+              
+                <span class="like-count">{{ recipe.total_likes}}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- JavaScript for handling like action -->
+    
+</body>
+</html>

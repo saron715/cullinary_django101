@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Add your HTML head content here -->
+    <link rel="stylesheet" href="{% static 'css/log.css'%}">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            
+                <a href="{% url 'profile' %}">Home</a>
+             
+        </nav>
+    </header>
+    
+        <u><h3>Create a Recipe Post</h3><u>
+        <div style="padding-left:200px;">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Post Recipe</button>
+        </form>
+    </div>
+    </body>
+    </html>
+    
+

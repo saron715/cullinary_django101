@@ -1,0 +1,139 @@
+
+
+.site-header {
+    height: 72px;
+    position: relative;
+    z-index: 1100;
+}
+
+article, aside, footer, header, img, nav, section {
+    display: block;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+user agent stylesheet
+header {
+    display: block;
+}
+body, input, label, select, td, textarea, th {
+    font-family: Graphik-Regular-Web,sans-serif;
+}
+body {
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    background-color: #2c3440;
+    background-image: linear-gradient(to bottom,#14181c calc(var(--layout-flex-leaderboard-height)),#14181c calc(250px + var(--layout-flex-leaderboard-height)),#2c3440 calc(251px + var(--layout-flex-leaderboard-height)));
+    background-position: 0 0;
+    color: #9ab;
+    font-size: 1rem;
+}
+body {
+    background: #fff;
+    color: #000;
+    line-height: 1;
+}
+style attribute {
+    --layout-trendi-video-height: 211px;
+    --layout-bottom-rail-height: 90px;
+}
+:root {
+    --layout-bottom-rail-height: 0px;
+    --layout-trendi-video-height: 0px;
+    --layout-flex-leaderboard-height: 0px;
+    --layout-ad-footer-offset: calc(var(--layout-bottom-rail-height) + var(--layout-trendi-video-height));
+    --viewport-safe-area-inset-top: env(safe-area-inset-top,0px);
+    --viewport-safe-area-inset-right: env(safe-area-inset-right,0px);
+    --viewport-safe-area-inset-bottom: env(safe-area-inset-bottom,0px);
+    --viewport-safe-area-inset-left: env(safe-area-inset-left,0px);
+    --viewport-safe-area-inset-y: calc(var(--viewport-safe-area-inset-top) + var(--viewport-safe-area-inset-bottom));
+    --viewport-safe-area-inset-x: calc(var(--viewport-safe-area-inset-left) + var(--viewport-safe-area-inset-right));
+    --poster-aspect-ratio: 1.5;
+    --poster-border-width: 1px;
+    --poster-border-radius: 3px;
+}
+html {
+    font-size: 13px;
+}
+::selection {
+    background: #40bcf4;
+    color: #fff;
+}
+
+element.style {
+}
+.site-body {
+    background: #14181c url(../img/content-bg.0d9a0f0f.png) 0 -1px repeat-x;
+    padding: 30px 0;
+}
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body, input, label, select, td, textarea, th {
+    font-family: Graphik-Regular-Web,sans-serif;
+}
+body {
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    background-color: #2c3440;
+    background-image: linear-gradient(to bottom,#14181c calc(var(--layout-flex-leaderboard-height)),#14181c calc(250px + var(--layout-flex-leaderboard-height)),#2c3440 calc(251px + var(--layout-flex-leaderboard-height)));
+    background-position: 0 0;
+    color: #9ab;
+    font-size: 1rem;
+    font-family: Graphik-Regular-Web, sans-serif;
+    font-size: 13px;
+}
+body {
+    background: #fff;
+    color: #000;
+    line-height: 1;
+}
+style attribute {
+    --layout-trendi-video-height: 211px;
+    --layout-bottom-rail-height: 90px;
+}
+:root {
+    --layout-bottom-rail-height: 0px;
+    --layout-trendi-video-height: 0px;
+    --layout-flex-leaderboard-height: 0px;
+    --layout-ad-footer-offset: calc(var(--layout-bottom-rail-height) + var(--layout-trendi-video-height));
+    --viewport-safe-area-inset-top: env(safe-area-inset-top,0px);
+    --viewport-safe-area-inset-right: env(safe-area-inset-right,0px);
+    --viewport-safe-area-inset-bottom: env(safe-area-inset-bottom,0px);
+    --viewport-safe-area-inset-left: env(safe-area-inset-left,0px);
+    --viewport-safe-area-inset-y: calc(var(--viewport-safe-area-inset-top) + var(--viewport-safe-area-inset-bottom));
+    --viewport-safe-area-inset-x: calc(var(--viewport-safe-area-inset-left) + var(--viewport-safe-area-inset-right));
+    --poster-aspect-ratio: 1.5;
+    --poster-border-width: 1px;
+    --poster-border-radius: 3px;
+}
+html {
+    font-size: 13px;
+}
+::selection {
+    background: #40bcf4;
+    color: #fff;
+}
