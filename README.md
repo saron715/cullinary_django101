@@ -24,5 +24,5 @@ These instructions will help you get a copy of the project up and running on you
 
 ### Installing
 
-1. Clone the repository:
+1. Clone the repository: https://github.com/saron715/cullinary_django101.git
 
