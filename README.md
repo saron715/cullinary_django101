@@ -1,5 +1,5 @@
 # cullinary_django101
-# Culinary Website with Django
+# Cullinary Website with Django
 
 This is a web application for sharing and discovering delicious recipes from around the world. The project is built using Django, a popular web framework for Python.
 
